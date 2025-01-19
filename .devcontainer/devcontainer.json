@@ -4,7 +4,7 @@
     "remoteEnv": {
         "PODMAN_USERNS": "keep-id"
     },
-    "postCreateCommand": "pip install -r requirements-dev.txt && python apps/manage.py migrate && echo 'Run \"python apps/manage.py runserver\" to start...'",
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y sqlite3 libsqlite3-dev && pip install -r requirements-dev.txt && python manage.py migrate && echo 'Run \"python manage.py runserver\" to start...'",
     "customizations": {
         "vscode": {
             "extensions": [
