@@ -12,11 +12,13 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import sys
+from typing import List
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 APPS_DIR = BASE_DIR / "apps"
+
 
 # Add APPS_DIR to the Python path
 sys.path.insert(0, str(APPS_DIR))
@@ -30,7 +32,7 @@ SECRET_KEY = "django-insecure-!y)-y!7ez1gy3v=scvllpf8)7*-vju+)3efiqv62eu7in5)hf$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS: List[str] = []
 
 
 # Application definition
